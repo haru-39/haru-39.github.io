@@ -4,6 +4,7 @@ title: "git memo"
 permalink: /docs/git-memo
 ---
 
+
 # これまでに学んだgitの用語
 
 ## リポジトリ
@@ -58,21 +59,38 @@ permalink: /docs/git-memo
 - ブランチを作成する.
 
 ## add
-`git add`
+`git add (filename)` or `git add .`
 - ファイルをコミットするためにステージングエリアに追加する.
+- 末尾にコミットするファイル名を記述するか,ピリオドを記述する.
+- ピリオドを記述した場合は,全ての変更がステージングされる.
 
 ## commit
-`git commit`
+`git commit -m (commit message)`
 - コミットを実行する.
+- コミットメッセージを付けることもあ能.
 
 ## push
-`git push`
+`git push (repository name)`
 - プッシュを実行する.
-
-## pull
-`git pull`
-- プルを実行する.
 
 ## merge
 `git merge`
 - リポジトリをマージする.
+
+
+# これまでに学んだGitHubの機能
+
+## プルリクエスト
+- 開発者のローカルリポジトリでの変更を,他の開発者に通知する機能.
+- 変更内容を分かりやすく表示すると同時に,変更に関する議論を行える.
+- git自身の機能ではなく,GitHubが最初に提供を始めた.
+
+## GitHub Actions
+- CI/CD(Continuous Integration/Continuous Delivery)を自動化するツール.
+- 開発の進行や,ユーザフィードバックの反映がスムーズになる.
+- yaml形式で自動化する内容を記述し,実行する.
+
+## GitHub Pages
+- Githubにあるリモートレポジトリの内容を,webページとして公開することができる.
+- 更新はGitHub Actionsを用いて自動化されている.
+- markdownファイルのhtmlファイルへの変換もサポートされている.
